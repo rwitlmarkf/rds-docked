@@ -1,0 +1,32 @@
+@page
+@model IndexModel
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Table</title>
+</head>
+<body>
+    <form method="post">
+        <input type="submit" value="OK" />
+    </form>
+
+    @if (Model.MyTable != null)
+    {
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <!-- Other columns -->
+            </tr>
+            @foreach (var item in Model.MyTable)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <!-- Other values -->
+                </tr>
+            }
+        </table>
+    }
+</body>
+</html>
